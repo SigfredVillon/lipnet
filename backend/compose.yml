@@ -1,0 +1,11 @@
+version: '3.6'
+services:
+    lipnet-api:
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        container_name: 'lipnet-api'
+        volumes:
+            - ./src:/var/webapps/lipnet
+        ports:
+          - 8888:8888
